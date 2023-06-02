@@ -1,0 +1,263 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+ }
+body{
+    font-family: 'Didact Gothic', sans-serif;
+    margin: 0;
+    background-image: url(pexels-mudassir-ali-3970396.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
+
+header{
+    z-index: 2;
+    display: flex;
+    left:0;
+    top:0;
+    min-height: 70px;
+    background-color:pink;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    color: black;
+    box-shadow: 1px 0 6px 2px;
+    position: sticky;
+    width: 100%;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 90px;
+    width: 130px;
+    margin-right: 10px;
+}
+nav{
+    margin-right: 10px;
+    font-size: larger;
+}
+nav a{
+    margin-right: 5px;
+}
+
+nav a:hover{
+    color:cornflowerblue;
+    
+}
+
+.Iniciofotos{
+    margin-top:0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 0 3px  3px rgba(0,0, 0, 0.2);
+    
+}
+
+
+
+
+.Sobremi{
+    color: white;
+    font-size: x-large;
+    width: 50%;
+    height: 200px;
+    padding: 50px;
+    align-items: center;
+    text-align: center;
+    margin:auto;
+ }
+.galery{
+    color: aliceblue;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+ .linea{
+    width: 100%;
+    color: blueviolet;
+    display: block;
+ }
+
+ .galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap:10px;
+    padding: 40px 0;
+    overflow: hidden;
+ }
+
+ .galeria img{
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+    height: 300px;
+    transition: transform 0.5s;
+ }
+ .galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+ }
+.galeria img:hover{
+    filter: blur(2px);
+    transform: rotate(15deg) scale(1.3);
+}
+
+.light-box{
+    position:fixed;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+ .light-box img{
+    width: auto;
+    max-height: 70vh;
+ }
+
+ .light-box:target{
+    transform: scale(1);
+ }
+ .close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: black;
+    color: aliceblue;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+ }
+ .next{
+    display: block;
+    background: black;
+    color: aliceblue;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+ }
+ .foot1{
+    text-align: center;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    margin-right: 15px;
+    width: 100%;
+    
+ }
+ .foot2{
+    text-align: center;
+
+ }
+
+ .final{
+    text-align: center;
+    align-items: center;
+
+ }
+ .corpo{
+    text-align: center;
+    align-items: center;
+    font-size: smaller;
+ }
+
+ .carousel-inner{
+    width: auto;
+    height: 500px;
+   
+    align-items: center;
+    overflow-y: scroll;
+    box-shadow: 2px 0 3px 5px rgba(0, 0, 0, .2);
+ }
+ 
+
+@media (max-width:700px ){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 7px 0px;
+        font-size: small;
+        text-align: center;
+        margin-left: 18px;
+    }
+    .Sobremi{
+        flex-direction: column;
+        padding: 28px;
+        font-size:small;
+    }
+    .Iniciofotos{
+        padding-top: 0px;
+    }
+    .galery{
+        
+        flex-direction: column;
+        font-size: small;
+    }
+    .foot1{
+        
+        flex-direction: column;
+        padding-right: 23px;
+    }
+    .corpo{
+        flex-direction: column;
+        font-size: xx-small;
+    }
+    .final{
+        font-size: medium;
+    }
+    .light-box img{
+        width: 250px;
+    }
+    .carousel-inner{
+        width: auto;
+        height: auto;
+        padding: 0;
+        
+    }
+    .logo img{
+        width: 70px;
+        height: 50px;
+    }
+    
+
+    
+
+}
